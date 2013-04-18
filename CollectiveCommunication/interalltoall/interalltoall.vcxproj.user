@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LocalDebuggerCommand>D:\PDT\OpenMPI_1.6.1\bin\mpiexec.exe</LocalDebuggerCommand>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LocalDebuggerCommandArguments>-n 9 -mca btl_tcp_if_exclude lo $(TargetPath)</LocalDebuggerCommandArguments>
+    <DebuggerFlavor>MpiClusterDebugger</DebuggerFlavor>
+    <MpiDebuggerSchedulerNode>localhost/9</MpiDebuggerSchedulerNode>
+    <MpiDebuggerShimLocation>"C:\Program Files (x86)\Microsoft Visual Studio 10.0\Common7\IDE\Remote Debugger\x86\mpishim100.exe"</MpiDebuggerShimLocation>
+    <MpiDebuggerMpiExecCommand>D:\PDT\OpenMPI_1.6.1\bin\mpiexec.exe</MpiDebuggerMpiExecCommand>
+    <MpiDebuggerAdditionalMpiExecArguments>-mca btl_tcp_if_exclude lo -debug $(TargetPath)</MpiDebuggerAdditionalMpiExecArguments>
+    <MpiDebuggerWorkingDirectory>$(ProjectDir)</MpiDebuggerWorkingDirectory>
+  </PropertyGroup>
+</Project>
